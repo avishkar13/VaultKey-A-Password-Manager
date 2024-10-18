@@ -113,23 +113,22 @@ const Manager = () => {
                 pauseOnHover
                 theme="light"
             />
-            {/* absolute bottom-auto left-auto right-0 top-0 */}
             
-            {/* <div className="absolute top-0 -z-10 h-[150vh] w-[150vw] md:h-[100vh] md:w-[100vw] bg-white overflow-hidden">
-                <div className=" h-[110vh] w-[135vw] md:h-[80vh] md:w-[85vw] translate-x-[-5%]  md:-translate-x-[10%] translate-y-[5%] rounded-xl bg-[green] opacity-25 blur-[80px]"></div>
-            </div> */}
+            <div className="absolute top-0 -z-10 h-[100%] w-[100%]  bg-white overflow-hidden">
+                <div className="absolute bottom-auto left-auto right-0 top-0 h-[100%] w-[100%] md:h-[80vh] md:w-[85vw] translate-x-[-5%]  md:-translate-x-[10%] translate-y-[5%] rounded-xl bg-[green] opacity-25 blur-[80px]"></div>
+            </div>
             
 
-            <div className='w-[150%] md:mycontainer mt-28  md:mt-20 '>
+            <div className='w-[100%] md:mycontainer mt-24 md:mt-10 '>
                 <div className="mx-auto">
-                    <h1 className='text-4xl font-bold text-center my-2 '>
+                    <h1 className='text-3xl md:text-4xl font-bold text-center my-2 '>
                         <span className='text-green-500'>&lt; </span>
                         Vault
                         <span className='text-green-500'>Key /&gt;</span></h1>
-                    <p className='text-green-900 text-center text-lg my-2 font-mono font-thin'>Your Own Password Manager</p>
-                    <div className="flex flex-col p-4 gap-8 items-center">
+                    <p className='text-green-900 text-center text-[85%] md:text-lg my-2 font-mono font-thin'>Your Own Password Manager</p>
+                    <div className="flex flex-col p-4 gap-4 md:gap-8 items-center">
                         <input value={form.site} onChange={handleChange} placeholder='Enter Website URL' className='rounded-full border w-full p-4 py-1 border-green-500 opacity-80' type="text" name='site' id='site' required />
-                        <div className="flex flex-col md:flex-row justify-between w-full gap-8">
+                        <div className="flex flex-col md:flex-row justify-between w-full gap-4 md:gap-8">
                             <input value={form.username} onChange={handleChange} placeholder='Enter Username' className='rounded-full border w-full  md:w-[73vw] p-4 py-1 border-green-500 opacity-80' type="text" name='username' id='username' required autoComplete='true' />
                             <div className="relative flex items-center">
                                 <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border w-full md:w-[27vw]  p-5  py-1 border-green-500 opacity-80' type="password" name='password' id='password' required/>
@@ -140,8 +139,8 @@ const Manager = () => {
                         </div>
 
                         <button ref={passRef} onClick={savePassword} className='flex gap-2 justify-center items-center
-                     font-bold font-serif bg-green-500 hover:bg-green-400 rounded-full px-4 py-2 w-fit h-11 border border-green-800'>
-                            <img src="icons/add.svg" alt="" />Save</button>
+                     font-bold font-serif bg-green-500 hover:bg-green-400 rounded-full px-4 py-2 w-32 h-11 border border-green-800'>
+                            <img src="icons/add.svg" alt="Save" />Save</button>
                     </div>
                 </div>
                 <div className="passwords p-2 md:p-0">
@@ -151,10 +150,10 @@ const Manager = () => {
 
     {passwordArray.length !== 0 && (
         <div className="">
-            <table className="table-auto w-full rounded-md overflow-hidden font-mono text-sm mb-10">
+            <table className="table-auto w-full rounded-md overflow-hidden font-mono text-[10px] md:text-lg mb-10">
                 <thead className="bg-green-800 text-white">
                     <tr>
-                        <th className="py-2 w-1/3 md:w-1/2">Site</th>
+                        <th className="py-2 w-1/3 md:w-1/3">Site</th>
                         <th className="py-2 w-1/5">Username</th>
                         <th className="py-2 w-1/5">Password</th>
                         <th className="py-2 w-1/12">Actions</th>
@@ -163,24 +162,24 @@ const Manager = () => {
                 <tbody className="bg-green-100">
                     {passwordArray.map((item, index) => (
                         <tr key={index}>
-                            <td className="border border-white py-2 text-center px-2 md:px-4 break-words">
+                            <td className="border border-white py-2 text-center px-1 md:px-4 break-words">
                                 <div className="flex justify-between items-center">
-                                    <a href={item.site} target="_blank" rel="noreferrer" className="break-all px-2">{item.site}</a>
-                                    <img className="h-4 md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.site) }} />
+                                    <a href={item.site} target="_blank" rel="noreferrer" className="break-all px-1 md:px-2">{item.site}</a>
+                                    <img className="h-[15px] md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.site) }} />
                                 </div>
                             </td>
 
-                            <td className="border border-white py-2 text-center px-2 md:px-4 break-words">
+                            <td className="border border-white py-2 text-center px-1 md:px-4 break-words">
                                 <div className="flex justify-between items-center">
                                     <span className="break-all px-2">{item.username}</span>
-                                    <img className="h-4 md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.username) }} />
+                                    <img className="h-[15px] md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.username) }} />
                                 </div>
                             </td>
 
-                            <td className="border border-white py-2 text-center px-2 md:px-4 break-words">
+                            <td className="border border-white py-2 text-center px-1 md:px-4 break-words">
                                 <div className="flex justify-between items-center">
                                     <span className="break-all px-2 ">{item.password}</span>
-                                    <img className="h-4 md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.password) }} />
+                                    <img className="h-[15px] md:h-5 cursor-pointer" src="icons/copy.svg" alt="copy" onClick={() => { copyText(item.password) }} />
                                 </div>
                             </td>
 
