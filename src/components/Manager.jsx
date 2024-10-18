@@ -113,11 +113,11 @@ const Manager = () => {
                 pauseOnHover
                 theme="light"
             />
-            <div className="absolute top-0 -z-10 min-h-[100vh] min-w-[100vw] bg-white overflow-hidden">
-                <div className="absolute bottom-auto left-auto right-0 top-0 h-[100vh] w-[100vw] md:h-[700px] md:w-[1000px] translate-x-[20%]  md:-translate-x-[30%] translate-y-[7%] rounded-xl bg-[green] opacity-30 blur-[80px]"></div>
+            <div className="absolute top-0 -z-10 h-[150vh] w-[150vw] md:h-[100vh] md:w-[100vw] bg-white overflow-hidden">
+                <div className="absolute bottom-auto left-auto right-0 top-0 h-[110vh] w-[135vw] md:h-[80vh] md:w-[85vw] translate-x-[-5%]  md:-translate-x-[10%] translate-y-[5%] rounded-xl bg-[green] opacity-25 blur-[80px]"></div>
             </div>
 
-            <div className='w-[150%] md:mycontainer mt-24  md:mt-0 '>
+            <div className='w-[150%] md:mycontainer mt-28  md:mt-20 '>
                 <div className="mx-auto">
                     <h1 className='text-4xl font-bold text-center my-2 '>
                         <span className='text-green-500'>&lt; </span>
@@ -127,9 +127,9 @@ const Manager = () => {
                     <div className="flex flex-col p-4 gap-8 items-center">
                         <input value={form.site} onChange={handleChange} placeholder='Enter Website URL' className='rounded-full border w-full p-4 py-1 border-green-500 opacity-80' type="text" name='site' id='site' required />
                         <div className="flex flex-col md:flex-row justify-between w-full gap-8">
-                            <input value={form.username} onChange={handleChange} placeholder='Enter Username' className='rounded-full border w-full  md:w-[75vw] p-4 py-1 border-green-500 opacity-80' type="text" name='username' id='username' required />
+                            <input value={form.username} onChange={handleChange} placeholder='Enter Username' className='rounded-full border w-full  md:w-[73vw] p-4 py-1 border-green-500 opacity-80' type="text" name='username' id='username' required autoComplete='true' />
                             <div className="relative flex items-center">
-                                <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border w-full md:w-[25vw]  p-5  py-1 border-green-500 opacity-80' type="password" name='password' id='password' required/>
+                                <input ref={passwordRef} value={form.password} onChange={handleChange} placeholder='Enter Password' className='rounded-full border w-full md:w-[27vw]  p-5  py-1 border-green-500 opacity-80' type="password" name='password' id='password' required/>
                                 <span className="absolute cursor-pointer right-[10px] top-0" onClick={showPassword}>
                                     <img ref={ref} className='py-1 ' width={25} src="icons/eye.svg" alt="eye" />
                                 </span>

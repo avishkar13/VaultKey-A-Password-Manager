@@ -4,6 +4,7 @@
 
 @layer components {
     .mycontainer {
-      @apply w-[100vw] px-20 py-16 mx-auto;
+      @apply w-[100vw] md:px-8 lg:px-20 py-16 mx-auto;
     }
   }
+
