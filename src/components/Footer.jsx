@@ -9,13 +9,11 @@ const Footer = () => {
                     <span className='text-green-500'>Key /&gt;</span>
                 </div>
             <div className='text-2xl'>||</div>
-            <div className='flex gap-2  items-center font-mono font-semibold text-md'>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                    <img className='invert h-6 mt-1 cursor-pointer hover:opacity-80 transition-opacity duration-500' src="icons/github.svg" alt="GitHub" />
+            <div className='  font-mono font-semibold text-md'>
+                <a className='flex gap-1 items-center' href="https://github.com/avishkar13" target="_blank" rel="noopener noreferrer">
+                    <img className='invert h-6  cursor-pointer hover:opacity-80 transition-opacity duration-500' src="icons/github.svg" alt="GitHub" /> <span className='hover:underline hover:text-green-400 transition duration-20  '>_avishkar13</span>
                 </a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className='hover:underline hover:text-green-400 transition duration-20 f'>
-                    _avishkar__13
-                </a>
+                
             </div>
         </div>
     );
