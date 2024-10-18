@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='bg-[#11512a] text-white flex items-center justify-center py-[9px] gap-6 md:gap-10 lg:gap-14 fixed bottom-0 left-0 w-full min-h-[9vh]'>
+        <div className='bg-[#11512a] text-white flex items-center justify-center py-[9px] gap-6 md:gap-10 lg:gap-14 fixed bottom-0 left-0 w-full min-h-[9vh] md:min-h-[7vh]'>
            <div className="logo font-bold text-2xl ml-18">
                     <span className='text-green-500'>&lt; </span>
                     Vault
