@@ -113,7 +113,7 @@ const Manager = () => {
                 pauseOnHover
                 theme="light"
             />
-            <div className="absolute top-0 -z-10 h-[100vh] w-[100vw] bg-white overflow-hidden">
+            <div className="absolute top-0 -z-10 min-h-[100vh] min-w-[100vw] bg-white overflow-hidden">
                 <div className="absolute bottom-auto left-auto right-0 top-0 h-[100vh] w-[100vw] md:h-[700px] md:w-[1000px] translate-x-[20%]  md:-translate-x-[30%] translate-y-[7%] rounded-xl bg-[green] opacity-30 blur-[80px]"></div>
             </div>
 
